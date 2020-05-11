@@ -1,6 +1,26 @@
-body{
+body {
     margin: 0;
 }
+
+input,
+select{
+    background: white;
+    padding: 10px 10px;
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+}
+h2 {
+    margin: 5px 0;
+}
+
+button {
+    border: 1px solid #d9d3d3;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 1px #0000003d;
+    min-width: 100px;
+    background: #FFF;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -14,7 +34,58 @@ body{
 }
 
 .columnsRight {
-   
     display: grid;
     grid-template-rows: 1fr auto auto;
+}
+
+.rightRow-addnew {
+    margin: 15px;
+}
+
+.addnew {
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto auto;
+    grid-gap: 15px;
+    padding: 15px 18px;
+    box-shadow: 0 0 7px 0px #0006;
+    border-radius: 2px;
+
+}
+
+.rightRow-paycount {
+    margin: 15px;
+}
+
+.paycount {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr auto;
+    padding: 25px 20px;
+    background: white;
+    box-shadow: 0 0 7px 0px #0006;
+    border-radius: 2px;
+}
+
+
+.statusContainer {
+    /* background: aliceblue; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status {
+    background: #E91E63;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 59px;
+    font-weight: 700;
+    padding: 10px;
 }

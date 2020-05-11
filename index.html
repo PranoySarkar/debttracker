@@ -14,9 +14,44 @@
 
         </div>
         <div class="columns columnsRight">
-            <div class="rightRow">Hello</div>
-            <div class="rightRow">Hello</div>
-            <div class="rightRow">Hello</div>
+
+            <div class="rightRow">
+                <div class="statusContainer">
+                    <div class="status">
+                        3500 inr
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="rightRow-paycount">
+                <h2>Add payment</h2>
+                <div class="paycount">
+                    <select id="pay names">
+                        <option value="Pranoy">Pranoy</option>
+                        <option value="Pritam">Pritam</option>
+                        <option value="Ram">Ram</option>
+                    </select>
+                    <input type="number" min="0" placeholder="Enter Amount" id="newpayupdate">
+                    <button type="Pay" class="btn">Pay</button>
+                </div>
+            </div>
+
+            <div class="rightRow-addnew">
+                <h2>Add new entry</h2>
+                <div class="addnew">
+                    <input type="text" placeholder="Enter Name" id="name">
+                    <input type="number" min="0" placeholder="Enter Amount" id="amount">
+                    <select id="pay type">
+                        <option value="Loan">Loan</option>
+                        <option value="debt">Debt</option>
+                    </select>
+                    <button type="Add new" class="btn">Add New</button>
+                </div>
+            </div>
         </div>
     </div>
 
