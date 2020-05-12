@@ -6,11 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debt Tracker</title>
     <link rel="stylesheet" href="style.css">
+   
 </head>
 
 <body>
+   
     <div class="container">
         <div class="columns">
+            <div class="columns columnsLeft">
+                <div class="tableContainer">
+                    <table class="table">
+                        <thead>
+                            <tr class="heading">
+                                <th class>Name</th>
+                                <th class>Pay Type</th>
+                                <th class>INR</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
         </div>
         <div class="columns columnsRight">
@@ -49,12 +67,16 @@
                         <option value="Loan">Loan</option>
                         <option value="debt">Debt</option>
                     </select>
-                    <button type="Add new" class="btn">Add New</button>
+                    <button type="Add new" class="btn" id="addNew">Add New</button>
                 </div>
             </div>
         </div>
-    </div>
 
+        
+
+
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

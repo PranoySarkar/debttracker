@@ -1,6 +1,15 @@
 body {
     margin: 0;
+    color: #4e4e4e;
+    /* border: 1px solid #f00; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
 }
+
 
 input,
 select{
@@ -26,6 +35,13 @@ button {
     grid-template-columns: 1fr 1fr;
     grid-gap: 4px;
     height: 100vh;
+    max-height: 700px;
+    /* width: 51vw; */
+    max-width: 1275px;
+    /* border: 1px solid #c5c5c5; */
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 0 0 15px 0px #0000001a;
 }
 
 .columns {
@@ -88,4 +104,48 @@ button {
     font-size: 59px;
     font-weight: 700;
     padding: 10px;
+}
+
+/* Left side */
+.columnsLeft {
+    /* background: aliceblue; */
+    height: 97%;
+}
+
+
+.tableContainer {
+    height: 95%;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 7px 0px #0006;
+}
+
+
+th,td {
+    /* background: antiquewhite; */
+    padding: 10px;
+}
+
+thead {
+    background: white;
+}
+
+th {border-bottom: 1px solid #dadada;}
+
+table.table {
+    border-spacing: 0px;
+}
+
+th {
+    border-bottom: 1px solid #dadada;
+    text-align: left;
+    font-size: 20px;
+}
+
+tr:nth-child(2n) {
+    /* color: #FFF; */
+    background: #e0e0e040;
 }
