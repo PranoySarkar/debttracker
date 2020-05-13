@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debt Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
    
 </head>
 
 <body>
+    
    
     <div class="container">
         <div class="columns">
@@ -48,13 +50,11 @@
             <div class="rightRow-paycount">
                 <h2>Add payment</h2>
                 <div class="paycount">
-                    <select id="pay names">
-                        <option value="Pranoy">Pranoy</option>
-                        <option value="Pritam">Pritam</option>
-                        <option value="Ram">Ram</option>
+                    <select id="payNames">
+                            
                     </select>
                     <input type="number" min="0" placeholder="Enter Amount" id="newpayupdate">
-                    <button type="Pay" class="btn">Pay</button>
+                    <button type="Pay" class="btn" id="payup">Pay</button>
                 </div>
             </div>
 
@@ -63,7 +63,7 @@
                 <div class="addnew">
                     <input type="text" placeholder="Enter Name" id="name">
                     <input type="number" min="0" placeholder="Enter Amount" id="amount">
-                    <select id="pay type">
+                    <select id="payType">
                         <option value="Loan">Loan</option>
                         <option value="debt">Debt</option>
                     </select>
