@@ -74,6 +74,7 @@ function addNewButtonClicked() {
     updatePaymentUsers(name);
     createRow(name, type, amount);
     updateStatus();
+    saveToLocalStorage();
 }
 
 function updatePaymentUsers(name) {
@@ -160,25 +161,26 @@ function addPayment() {
     }
     amount = parseInt(amount);
 
-    for(let i=0; i<transactions.length;i++){
-        let transaction= transactions[i];
-        if(transaction.name==name){
-            transaction.amount=transaction.amount-amount;
+    for (let i = 0; i < transactions.length; i++) {
+        let transaction = transactions[i];
+        if (transaction.name == name) {
+            transaction.amount = transaction.amount - amount;
         }
     }
     refreshTable();
     updateStatus();
+    saveToLocalStorage();
 
 }
 
 
-function refreshTable(){
-    let tbody=document.querySelector('tbody');
-    tbody.innerHTML='';
+function refreshTable() {
+    let tbody = document.querySelector('tbody');
+    tbody.innerHTML = '';
 
-    for(let i=0; i<transactions.length;i++){
-        let transaction= transactions[i];
-        createRow(transaction.name,transaction.type,transaction.amount);
+    for (let i = 0; i < transactions.length; i++) {
+        let transaction = transactions[i];
+        createRow(transaction.name, transaction.type, transaction.amount);
     }
 }
 
@@ -196,3 +198,26 @@ function updateStatus() {
     statusElement.innerHTML = status;
 
 }
+
+function saveToLocalStorage() {
+    let transactionString=JSON.stringify(transactions)
+
+    localStorage.setItem('debtData', transactionString)
+}
+
+function restoreData(){
+    let transactionString=localStorage.getItem('debtData');
+    if(transactionString!=null){
+        transactions=JSON.parse(transactionString);
+        updateStatus();
+        refreshTable();
+        for(let i=0;i<transactions.length;i++){
+            let transaction = transactions[i];
+            updatePaymentUsers(transaction.name);
+        }
+        
+    }
+
+}
+
+restoreData();
